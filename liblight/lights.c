@@ -75,28 +75,28 @@ char const*const LCD_FILE
         = "/sys/class/leds/lcd-backlight/brightness";
 
 char const*const BREATH_LED_LUT_FLAGS
-        = "/sys/class/leds/nubia_led/lut_flags";
+        = "/sys/class/leds/red/lut_flags";
 
 char const*const BREATH_LED_PAUSE_HI
-        = "/sys/class/leds/nubia_led/pause_hi";
+        = "/sys/class/leds/red/pause_hi";
 
 char const*const BREATH_LED_PAUSE_LO
-        = "/sys/class/leds/nubia_led/pause_lo";
+        = "/sys/class/leds/red/pause_lo";
 
 char const*const BREATH_LED_RAMP_STEP_MS
-        = "/sys/class/leds/nubia_led/ramp_step_ms";
+        = "/sys/class/leds/red/ramp_step_ms";
 
 char const*const BREATH_LED_DUTY_PCTS
-        = "/sys/class/leds/nubia_led/duty_pcts";
+        = "/sys/class/leds/red/duty_pcts";
 
 char const*const BREATH_LED
-        = "/sys/class/leds/nubia_led/brightness";
+        = "/sys/class/leds/red/brightness";
 
 char const*const BREATH_LED_OUTN
-        = "/sys/class/leds/nubia_led/outn";
+        = "/sys/class/leds/red/outn";
 
 char const*const BREATH_LED_BLINK_MODE
-        = "/sys/class/leds/nubia_led/blink_mode";
+        = "/sys/class/leds/red/blink_mode";
 
 char const*const BATTERY_CAPACITY
         = "/sys/class/power_supply/battery/capacity";
