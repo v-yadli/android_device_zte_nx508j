@@ -19,7 +19,7 @@
 # Product-specific compile-time definitions.
 #
 
-LOCAL_PATH := device/zte/nx510j
+LOCAL_PATH := device/zte/nx508j
 
 PRODUCT_COPY_FILES := $(filter-out frameworks/base/data/keyboards/Generic.kl:system/usr/keylayout/Generic.kl , $(PRODUCT_COPY_FILES))
 
@@ -160,7 +160,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x04000000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x04000000
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2684354560
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 10737418240
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 27633630208
 BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_PERSISTIMAGE_PARTITION_SIZE := 33554432
@@ -198,8 +198,8 @@ TW_NEW_ION_HEAP := true
 TW_FLASH_FROM_STORAGE := true
 TW_INTERNAL_STORAGE_PATH := "/data/media/0"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
-TW_EXTERNAL_STORAGE_PATH := "/external_sd"
-TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+#TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+#TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 TW_DEFAULT_EXTERNAL_STORAGE := true
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TARGET_RECOVERY_QCOM_RTC_FIX := true
@@ -217,7 +217,7 @@ PROTOBUF_SUPPORTED := true
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 
-BOARD_SEPOLICY_DIRS += device/zte/nx510j/sepolicy
+BOARD_SEPOLICY_DIRS += device/zte/nx508j/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     atfwd.te \
@@ -266,4 +266,4 @@ WIFI_DRIVER_FW_PATH_STA := "sta"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # inherit from the proprietary version
--include vendor/zte/nx510j/BoardConfigVendor.mk
+-include vendor/zte/nx508j/BoardConfigVendor.mk
