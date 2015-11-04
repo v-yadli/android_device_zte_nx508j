@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit from nx510j device
-$(call inherit-product, device/zte/nx510j/nx510j.mk)
+# Inherit from nx508j device
+$(call inherit-product, device/zte/nx508j/nx508j.mk)
 
 # Enhanced NFC
 $(call inherit-product, vendor/slim/config/nfc_enhanced.mk)
@@ -21,8 +21,8 @@ $(call inherit-product, vendor/slim/config/nfc_enhanced.mk)
 # Inherit some common SLIM stuff.
 $(call inherit-product, vendor/slim/config/common_full_phone.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/zte/nx510j/overlay-slim
+DEVICE_PACKAGE_OVERLAYS += device/zte/nx508j/overlay-slim
 
-BOARD_HARDWARE_CLASS := device/zte/nx510j/cmhw
+BOARD_HARDWARE_CLASS := device/zte/nx508j/cmhw
 
-PRODUCT_NAME := slim_nx510j
+PRODUCT_NAME := slim_nx508j
