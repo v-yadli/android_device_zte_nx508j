@@ -14,11 +14,34 @@
 # limitations under the License.
 
 # Inherit proprietary blobs
-$(call inherit-product-if-exists, vendor/zte/nx510j/nx510j-vendor.mk)
+$(call inherit-product-if-exists, vendor/zte/nx508j/nx508j-vendor.mk)
 
-LOCAL_PATH := device/zte/nx510j
+LOCAL_PATH := device/zte/nx508j
 
 DEVICE_PACKAGE_OVERLAYS := $(LOCAL_PATH)/overlay
+
+#modules
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/modules/ansi_cprng.ko:system/lib/modules/ansi_cprng.ko \
+    $(LOCAL_PATH)/modules/core_ctl.ko:system/lib/modules/ansi_cprng.ko \
+    $(LOCAL_PATH)/modules/evbug.ko:system/lib/modules/evbug.ko \
+    $(LOCAL_PATH)/modules/gpio_axis.ko:system/lib/modules/gpio_axis.ko \
+    $(LOCAL_PATH)/modules/gpio_event.ko:system/lib/modules/gpio_event.ko \
+    $(LOCAL_PATH)/modules/gpio_input.ko:system/lib/modules/gpio_input.ko \
+    $(LOCAL_PATH)/modules/gpio_matrix.ko:system/lib/modules/gpio_matrix.ko \
+    $(LOCAL_PATH)/modules/gpio_output.ko:system/lib/modules/gpio_output.ko \
+    $(LOCAL_PATH)/modules/gspca_main.ko:system/lib/modules/gspca_main.ko \
+    $(LOCAL_PATH)/modules/mcDrvModule.ko:system/lib/modules/mcDrvModule.ko \
+    $(LOCAL_PATH)/modules/mcKernelApi.ko:system/lib/modules/mcKernelApi.ko \
+    $(LOCAL_PATH)/modules/mmc_block_test.ko:system/lib/modules/mmc_block_test.ko \
+    $(LOCAL_PATH)/modules/mmc_test.ko:system/lib/modules/mmc_test.ko \
+    $(LOCAL_PATH)/modules/msm-buspm-dev.ko:system/lib/modules/msm-buspm-dev.ko \
+    $(LOCAL_PATH)/modules/spidev.ko:system/lib/modules/spidev.ko \
+    $(LOCAL_PATH)/modules/test-iosched.ko:system/lib/modules/test-iosched.ko \
+    $(LOCAL_PATH)/modules/texfat.ko:system/lib/modules/texfat.ko \
+    $(LOCAL_PATH)/modules/ufs_test.ko:system/lib/modules/fs_test.ko \
+    $(LOCAL_PATH)/modules/wil6210.ko:system/lib/modules/wil6210.ko \
+    $(LOCAL_PATH)/modules/qca_cld/qca_cld_wlan.ko:system/lib/modules/qca_cld/qca_cld_wlan.ko
 
 # copy customized media_profiles and media_codecs xmls for 8994
 PRODUCT_COPY_FILES += \
@@ -121,6 +144,30 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/data/netmgr_config.xml:system/etc/data/netmgr_config.xml \
     $(LOCAL_PATH)/configs/data/qmi_config.xml:system/etc/data/qmi_config.xml
 
+# Audio calibration
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/acdb/Fluid/Fluid_Bluetooth_cal.acdb:system/etc/acdbdata/Fluid/Fluid_Bluetooth_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/Fluid/Fluid_General_cal.acdb:system/etc/acdbdata/Fluid/Fluid_General_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/Fluid/Fluid_Global_cal.acdb:system/etc/acdbdata/Fluid/Fluid_Global_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/Fluid/Fluid_Handset_cal.acdb:system/etc/acdbdata/Fluid/Fluid_Handset_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/Fluid/Fluid_Hdmi_cal.acdb:system/etc/acdbdata/Fluid/Fluid_Hdmi_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/Fluid/Fluid_Headset_cal.acdb:system/etc/acdbdata/Fluid/Fluid_Headset_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/Fluid/Fluid_Speaker_cal.acdb:system/etc/acdbdata/Fluid/Fluid_Speaker_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/Liquid/Liquid_Bluetooth_cal.acdb:system/etc/acdbdata/Liquid/Liquid_Bluetooth_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/Liquid/Liquid_General_cal.acdb:system/etc/acdbdata/Liquid/Liquid_General_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/Liquid/Liquid_Global_cal.acdb:system/etc/acdbdata/Liquid/Liquid_Global_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/Liquid/Liquid_Handset_cal.acdb:system/etc/acdbdata/Liquid/Liquid_Handset_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/Liquid/Liquid_Hdmi_cal.acdb:system/etc/acdbdata/Liquid/Liquid_Hdmi_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/Liquid/Liquid_Headset_cal.acdb:system/etc/acdbdata/Liquid/Liquid_Headset_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/Liquid/Liquid_Speaker_cal.acdb:system/etc/acdbdata/Liquid/Liquid_Speaker_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/MTP/MTP_Bluetooth_cal.acdb:system/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/MTP/MTP_General_cal.acdb:system/etc/acdbdata/MTP/MTP_General_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/MTP/MTP_Global_cal.acdb:system/etc/acdbdata/MTP/MTP_Global_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/MTP/MTP_Handset_cal.acdb:system/etc/acdbdata/MTP/MTP_Handset_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/MTP/MTP_Hdmi_cal.acdb:system/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/MTP/MTP_Headset_cal.acdb:system/etc/acdbdata/MTP/MTP_Headset_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/MTP/MTP_Speaker_cal.acdb:system/etc/acdbdata/MTP/MTP_Speaker_cal.acdb
+
 # Dolby
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/dolby/ds1-default.xml:system/vendor/etc/dolby/ds1-default.xml
@@ -131,7 +178,7 @@ PRODUCT_COPY_FILES += \
 
 # AP config
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/telephony/NX510J_Z0-0.xml:system/etc/telephony/NX510J_Z0-0.xml \
+    $(LOCAL_PATH)/configs/telephony/NX508H-0.xml:system/etc/telephony/NX508H-0.xml \
     $(LOCAL_PATH)/configs/telephony/default_static_config.xml:system/etc/telephony/default_static_config.xml
 
 # Override heap growth limit due to high display density on device
@@ -150,24 +197,24 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
-PRODUCT_NAME := full_nx510j
-PRODUCT_DEVICE := nx510j
+PRODUCT_NAME := full_nx508j
+PRODUCT_DEVICE := nx508j
 PRODUCT_MANUFACTURER := nubia
-PRODUCT_MODEL := NX510J
+PRODUCT_MODEL := NX508J
 
 PRODUCT_GMS_CLIENTID_BASE := android-zte
 
 PRODUCT_BRAND := nubia
 TARGET_VENDOR := nubia
-TARGET_VENDOR_PRODUCT_NAME := NX510J
-TARGET_VENDOR_DEVICE_NAME := NX510J
-PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=NX510J PRODUCT_NAME=NX510J
+TARGET_VENDOR_PRODUCT_NAME := NX508J
+TARGET_VENDOR_DEVICE_NAME := NX508J
+PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=NX508J PRODUCT_NAME=NX508J
 
 ## Use the latest approved GMS identifiers
 ifneq ($(SIGN_BUILD),true)
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT=nubia/NX510J/NX510J:5.1.1/LMY47V/eng.nubia.20151028.122334:user/release-keys \
-    PRIVATE_BUILD_DESC="NX510J-user 5.1.1 LMY47V eng.nubia.20151028.122334 release-keys"
+    BUILD_FINGERPRINT=nubia/NX508J/NX508J:5.0.2/LRX22G/eng.nubia.20150921.094206:user/release-keys \
+    PRIVATE_BUILD_DESC="NX508J-user 5.0.2 LRX22G eng.nubia.20150921.094206 release-keys"
 endif
 
 #ANT+ stack
