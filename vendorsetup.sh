@@ -1,0 +1,2 @@
+add_lunch_combo cm_nx508j-eng
+add_lunch_combo cm_nx508j-userdebug
