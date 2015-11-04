@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/nx510j.mk
+	$(LOCAL_DIR)/nx508j.mk
