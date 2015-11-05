@@ -3,7 +3,7 @@
 set -e
 
 export VENDOR=zte
-export DEVICE=nx510j
+export DEVICE=nx508j
 
 function extract() {
     for FILE in `egrep -v '(^#|^$)' $1`; do
