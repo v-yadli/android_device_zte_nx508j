@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export VENDOR=zte
-export DEVICE=nx510j
+export DEVICE=nx508j
 
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
@@ -116,7 +116,7 @@ EOF
 
 LOCAL_PATH := \$(call my-dir)
 
-ifneq (\$(filter nx510j,\$(TARGET_DEVICE)),)
+ifneq (\$(filter nx508j,\$(TARGET_DEVICE)),)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE        := TimeService
