@@ -19,4 +19,4 @@ Rear Camera  | 16.0 MP, LED flash
 Front Camera | 8.0 MP
 Release Date | March 2015
 
-![ZTE Nubia Z9](http://static.nubia.cn/product/z9/images/params/params_z9_02.jpg "ZTE Nubia Z9")
+![ZTE Nubia Z9](http://static.nubia.cn/product/z9/images/gallery/z9_02.jpg "ZTE Nubia Z9")
