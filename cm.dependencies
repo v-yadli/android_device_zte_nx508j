@@ -1,7 +1,7 @@
 [
   {
-    "repository": "android_vendor_zte_nx510j",
-    "target_path": "vendor/zte/nx510j"
+    "repository": "android_vendor_zte_nx508j",
+    "target_path": "vendor/zte/nx508j"
   },
   {
     "repository": "android_kernel_zte_msm8994",
