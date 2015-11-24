@@ -150,7 +150,7 @@ PRODUCT_COPY_FILES += \
 
 # Whitelist
 PRODUCT_COPY_FILES += \
-    device/zte/nx510j/whitelistedapps.xml:system/etc/whitelistedapps.xml
+    device/zte/nx508j/whitelistedapps.xml:system/etc/whitelistedapps.xml
 
 # MIDI feature
 PRODUCT_COPY_FILES += \
