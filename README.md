@@ -19,7 +19,7 @@ Audio | TFA9890 Amplifier, AK4961 Codec
 Display | 1080 x 1920 pixels, 5.2", borderless screen
 Touchscreen | Atmel MXTS
 Rear Camera  | IMX234, OIS, 16.0 MP, LED flash
-Front Camera | IMX179 8.0 MP
-Release Date | May 2015
+Front Camera | IMX179, 8.0 MP
+Release Date | May 6, 2015
 
 ![ZTE Nubia Z9](http://static.nubia.cn/product/z9/images/gallery/z9_02.jpg "ZTE Nubia Z9")
