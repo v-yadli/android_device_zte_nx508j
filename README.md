@@ -16,7 +16,7 @@ MicroSD | Not Supported
 Quick Charge | QC 2.0 9V~1.5A
 Battery | 2900 mAh (non-removable)
 Audio | TFA9890 Amplifier, AK4961 Codec
-Display | 1080 x 1920 pixels, 5.2", borderless screen
+Display | 1080 x 1920 pixels, 5.2", bezel-less screen
 Touchscreen | Atmel MXTS
 Rear Camera  | IMX234, OIS, 16.0 MP, LED flash
 Front Camera | IMX179, 8.0 MP
